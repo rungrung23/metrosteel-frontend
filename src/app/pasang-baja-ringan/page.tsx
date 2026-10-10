@@ -1,0 +1,4 @@
+import PageLayout from "@/components/page-layout";
+import { site } from "@/lib/site";
+export const metadata = { title: "Pasang Baja Ringan" };
+export default function Page() { return <PageLayout title="Pasang Baja Ringan" description="Informasi layanan pemasangan baja ringan Metro Steel."><div className="card-grid"><article className="service-card"><h3>Konsultasi kebutuhan</h3><p>Sampaikan kebutuhan atap, ukuran bangunan, atau ruang lingkup pekerjaan Anda kepada tim kami.</p></article><article className="service-card"><h3>Penawaran proyek</h3><p>Tim dapat membantu membahas material dan lingkup pekerjaan sesuai kebutuhan proyek.</p></article><article className="service-card"><h3>Hubungi tim kami</h3><p>Detail layanan dan portofolio akan disesuaikan dengan konten resmi WordPress.</p><a className="card-link" href={site.whatsapp} target="_blank" rel="noreferrer">Chat WhatsApp →</a></article></div></PageLayout>; }

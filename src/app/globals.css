@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root { --navy: #2444b4; --navy-dark: #18348e; --ink: #172033; --muted: #64748b; --pale: #f4f7fc; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: white; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+.site-header { background: var(--navy); color: white; border-radius: 0 0 14px 14px; }
+.header-inner { max-width: 1240px; margin: auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo-mark { font-weight: 900; font-size: 36px; letter-spacing: -2px; line-height: .9; }
+.logo-sub { display:block; font-size: 16px; font-weight: 400; letter-spacing: 0; text-align:center; margin-top: 6px; }
+.main-nav { display:flex; gap: 26px; align-items:center; flex-wrap:wrap; font-size:14px; }
+.main-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.chat-button { background:#54cf72; color:white; border-radius:7px; padding:12px 20px; font-weight:700; white-space:nowrap; }
+.hero { max-width: 1240px; margin: 16px auto 0; padding: clamp(34px, 7vw, 88px); border-radius: 4px; color:white; background: radial-gradient(circle at 84% 24%, #ff835a 0 8%, transparent 17%), radial-gradient(circle at 56% 105%, #f5b04e 0 12%, transparent 27%), linear-gradient(120deg,#075ce0,#288bd3 65%,#075ce0); min-height: 410px; display:flex; align-items:center; }
+.hero h1 { font-size:clamp(34px,5vw,64px); max-width:780px; line-height:1.05; margin:0 0 20px; font-weight:900; letter-spacing:-1.5px; }
+.hero p { font-size:clamp(16px,2vw,22px); max-width:680px; line-height:1.6; }
+.hero-cta { display:inline-block; margin-top:14px; background:#f36e4d; border-radius:10px; padding:15px 22px; font-size:clamp(16px,2vw,23px); font-weight:900; }
+.wrap { max-width:1180px; margin:auto; padding:54px 24px; }
+.eyebrow { color:var(--navy); text-transform:uppercase; letter-spacing:2px; font-size:12px; font-weight:800; }
+.section-title { font-size:clamp(28px,3vw,40px); line-height:1.15; margin:10px 0 16px; }
+.lead { color:var(--muted); line-height:1.75; max-width:760px; }
+.card-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:28px; }
+.service-card { border:1px solid #e4eaf4; border-radius:14px; padding:24px; background:white; box-shadow:0 8px 24px rgba(22,46,92,.04); }
+.service-card h3 { margin:0 0 10px; font-size:20px; }
+.service-card p { color:var(--muted); line-height:1.65; font-size:14px; }
+.card-link { color:var(--navy); font-weight:700; display:inline-block; margin-top:8px; }
+.band { background:var(--pale); }
+.page-hero { background:var(--pale); padding:56px 24px; border-bottom:1px solid #e7edf6; }
+.page-hero-inner { max-width:1180px; margin:auto; }
+.breadcrumb { color:var(--muted); font-size:13px; margin-bottom:18px; }
+.price-toolbar { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+.price-search { flex:1; min-width:220px; border:1px solid #d9e1ee; border-radius:9px; padding:13px 14px; font:inherit; }
+.price-select { border:1px solid #d9e1ee; border-radius:9px; padding:13px; background:white; font:inherit; }
+.price-table-wrap { overflow:auto; border:1px solid #e1e7f0; border-radius:12px; }
+.price-table { width:100%; border-collapse:collapse; min-width:460px; font-size:14px; }
+.price-table th { background:var(--navy); color:white; text-align:left; padding:14px; }
+.price-table td { border-bottom:1px solid #e8edf5; padding:13px 14px; }
+.price-table tr:nth-child(even) td { background:#f8faff; }
+.notice { border-radius:10px; padding:14px 16px; background:#fff8e7; color:#805a12; font-size:14px; line-height:1.6; }
+.site-footer { background:#101c3a; color:white; margin-top:40px; }
+.footer-inner { max-width:1180px; margin:auto; padding:44px 24px; display:grid; grid-template-columns:2fr 1fr 1fr; gap:28px; }
+.site-footer p,.site-footer a { color:#d5dced; line-height:1.8; font-size:14px; }
+.mobile-chat { display:none; }
+@media(max-width:800px) {
+ .header-inner { align-items:flex-start; flex-wrap:wrap; padding:16px; }
+ .main-nav { order:3; width:100%; gap:14px; font-size:13px; }
+ .logo-mark { font-size:30px; }
+ .chat-button { padding:10px 13px; }
+ .hero { margin:10px 10px 0; min-height:360px; padding:30px 24px; }
+ .card-grid { grid-template-columns:1fr; }
+ .wrap { padding:40px 18px; }
+ .footer-inner { grid-template-columns:1fr; }
+ .mobile-chat { display:block; position:fixed; z-index:10; bottom:0; left:0; right:0; background:var(--navy); color:white; padding:12px 16px; text-align:center; box-shadow:0 -4px 16px #0002; }
+ body { padding-bottom:44px; }
+}
